@@ -10,7 +10,7 @@ import sys
 reload(sys)
 sys.setdefaultencoding( "utf-8" )
 
-friend = '179309157' # 朋友的QQ号，朋友的空间要求允许你能访问
+friend = '504347120' # 朋友的QQ号，朋友的空间要求允许你能访问
 user = '179309157'    # 你的QQ号
 pw = '284731204sy'  # 你的QQ密码
 
@@ -72,7 +72,7 @@ while True:
         divs = selector.xpath('//*[@id="msgList"]/li/div[3]')
 
         #这里使用 a 表示内容可以连续不清空写入
-        with open('qq_word1.txt','a') as f:
+        with open('assets/qq_word_zw.txt','a') as f:
             for div in divs:
                 qq_name = div.xpath('./div[2]/a/text()')
                 qq_content = div.xpath('./div[2]/pre/text()')
@@ -86,12 +86,12 @@ while True:
                 try:
                     f.write(qq_content + "\n")
                 except Exception as e:
-                    print 'str(Exception):\t', str(Exception)
-                    print 'str(e):\t\t', str(e)
-                    print 'repr(e):\t', repr(e)
-                    print 'e.message:\t', e.message
-                    print 'traceback.print_exc():'; traceback.print_exc()
-                    print 'traceback.format_exc():\n%s' % traceback.format_exc()
+                    # print 'str(Exception):\t', str(Exception)
+                    # print 'str(e):\t\t', str(e)
+                    # print 'repr(e):\t', repr(e)
+                    # print 'e.message:\t', e.message
+                    # print 'traceback.print_exc():'; traceback.print_exc()
+                    # print 'traceback.format_exc():\n%s' % traceback.format_exc()
                     continue
                 
 

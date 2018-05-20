@@ -1,4 +1,8 @@
 #coding:utf-8
+'''
+selenium 自动化测试工具
+
+'''
 from selenium import webdriver # 导入webdriver包
 
 import time
