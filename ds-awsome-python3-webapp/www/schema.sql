@@ -6,7 +6,7 @@ create database awesome;
 
 use awesome;
 
-grant select, insert, update, delete,create,drop on awesome.* to 'root'@'localhost' identified by '';
+grant select, insert, update, delete,create,drop on awesome.* to 'www-data'@'localhost' identified by 'www-data';
 
 create table users (
     `id` varchar(50) not null,

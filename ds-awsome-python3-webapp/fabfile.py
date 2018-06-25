@@ -11,10 +11,9 @@ import os, re
 
 from datetime import datetime
 from fabric.api import *
-
-env.user = 'michael'
+env.user = 'devin'
 env.sudo_user = 'root'
-env.hosts = ['192.168.0.3']
+env.hosts = ['192.168.1.103']
 
 db_user = 'www-data'
 db_password = 'www-data'
@@ -48,7 +47,7 @@ def build():
     '''
     Build dist package.
     '''
-    includes = ['static', 'templates', 'transwarp', 'favicon.ico', '*.py']
+    includes = ['static', 'templates', 'favicon.ico', '*.py'] # 'transwarp' 此文件夹不在，暂时屏蔽
     excludes = ['test', '.*', '*.pyc', '*.pyo']
     local('rm -f dist/%s' % _TAR_FILE)
     with lcd(os.path.join(_current_path(), 'www')):
