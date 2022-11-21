@@ -53,7 +53,7 @@ sortedcontainers==2.1.0
 soupsieve==1.8
 tempora==1.14
 tensorboard==1.13.1
-tensorflow==1.13.1
+tensorflow==2.9.3
 tensorflow-estimator==1.13.0
 termcolor==1.1.0
 Theano==1.0.4
